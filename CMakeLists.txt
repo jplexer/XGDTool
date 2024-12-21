@@ -208,6 +208,8 @@ elseif(UNIX)
         OUTPUT_STRIP_TRAILING_WHITESPACE
     )
 
+    string(STRIP "${wxWidgets_LIBS}" wxWidgets_LIBS)
+
     target_link_libraries(${PROJECT_NAME} PRIVATE 
         zarchive 
         ${LZ4_LIBRARIES} 
